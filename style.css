@@ -1,0 +1,26 @@
+.contaner {
+    width: 300px;
+    border: 1px solid black;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #04585e94;
+    box-shadow: 10px 10px 15px 2px;
+}
+button{
+    padding: 11px 18px;
+    width: 65px;
+    box-shadow: -3px -2px 7px 0px
+}
+input[type="text"] {
+    width: 293px;
+    margin-bottom: 13px;
+    height: 80px;
+    background-color: aqua;
+}
+.key_box{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 13px;
+    row-gap: 13px;
+    justify-content: space-between;
+}
