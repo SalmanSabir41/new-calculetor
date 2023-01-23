@@ -16,6 +16,7 @@ input[type="text"] {
     margin-bottom: 13px;
     height: 80px;
     background-color: aqua;
+    font-size: 40px;
 }
 .key_box{
     display: flex;

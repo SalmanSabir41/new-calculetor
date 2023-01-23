@@ -13,36 +13,57 @@
     <div class="contaner">
         <div class="main_box">
             <div class="scene">
-                <input type="text">
+                <input type="text" id="ui" class="just">
             </div>
             <div class="key_box">
-                <button onclick="nokey()">AC</button>
-                <button onclick="nokey()">c</button>
-                <button onclick="nokey()">%</button>
-                <button onclick="nokey()">/</button>
+                <button onclick="allclr('ac')" id="in_allclr">AC</button>
+                <button onclick="clr('c')" id="in_clr">c</button>
+                <button onclick="nokey('%')" id="in_re">%</button>
+                <button onclick="nokey('/')" id="in_dvd">/</button>
 
-                <button onclick="nokey()">7</button>
-                <button onclick="nokey()">8</button>
-                <button onclick="nokey()">9</button>
-                <button onclick="nokey()">x</button>
+                <button onclick="nokey(7)" id="in7">7</button>
+                <button onclick="nokey(8)" id="in8">8</button>
+                <button onclick="nokey(9)" id="in9">9</button>
+                <button onclick="nokey('*')" id="in_multi">x</button>
 
-                <button onclick="nokey()">4</button>
-                <button onclick="nokey()">5</button>
-                <button onclick="nokey()">6</button>
-                <button onclick="nokey()">-</button>
+                <button onclick="nokey(4)" id="in4">4</button>
+                <button onclick="nokey(5)" id="in5">5</button>
+                <button onclick="nokey(6)" id="in6">6</button>
+                <button onclick="nokey('-')" id="in_sub">-</button>
 
-                <button onclick="nokey()">1</button>
-                <button onclick="nokey()">2</button>
-                <button onclick="nokey()">3</button>
-                <button onclick="nokey()">+</button>
+                <button onclick="nokey(1)" id="in1">1</button>
+                <button onclick="nokey(2)" id="in2">2</button>
+                <button onclick="nokey(3)" id="in3">3</button>
+                <button onclick="nokey('+')" id="in_add">+</button>
 
-                <button onclick="nokey()">00</button>
-                <button onclick="nokey()">0</button>
-                <button onclick="nokey()">.</button>
-                <button onclick="nokey()">=</button>
+                <button onclick="nokey(00)" id="in00">00</button>
+                <button onclick="nokey(0)" id="in0">0</button>
+                <button onclick="nokey('.')" class="web">.</button>
+                <button onclick="setresult()" class="web">=</button>
             </div>
         </div>
     </div>
+
+    <script>
+        function nokey(val){
+            let input = document.getElementById('ui').value;
+            input =input + val;
+            document.getElementById('ui').value = input;
+        }
+
+        function setresult(){
+            let ui = document.getElementById('ui').value;
+            let result = eval(ui)
+            document.getElementById('ui').value = result
+            console.log(result)
+        }
+
+        function allclr(){
+            document.getElementById('ui').value = ''
+        }
+
+
+    </script>
 
 </body>
 
